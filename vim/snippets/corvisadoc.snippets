@@ -1,0 +1,127 @@
+snippet attr
+	<attribute name="${1}" type="${2}" />
+snippet attrl
+	<attribute name="${1}" lookup="Lookup${2}" />
+snippet attrd
+	<attribute name="${1}" type="${2}" >${3}</attribute>
+snippet list
+	<list name="${1}">
+		<object>
+			<attribute name="${2}" type="${3}" />
+			${4}
+		</object>
+	</list>
+snippet obj
+	<object name="${1}">
+		<attribute name="${2}" type="${3}" />
+	</object>
+snippet output
+	<object>
+		<list name="data">
+			<attribute name="${1}" type="${2}" />
+		</list>
+		<object name="meta">
+			<attribute name="dir" type="string" />
+			<attribute name="limit" type="integer" />
+			<attribute name="sort" type="string" />
+			<attribute name="start" type="integer" />
+			<attribute name="total" type="integer" />
+		</object>
+		<attribute name="success" type="boolean" />
+	</object>
+snippet chapter
+	<?xml version="1.0" encoding="UTF-8" ?>
+	<chapter xmlns="http://www.corvisa.com/apidoc/1.0" id="${1:id}" title="${2:Title}">
+		<section title="" id="$1.all">
+			<endpoint url="/api/$1">
+				<method name="GET">
+					<text>
+						<p>
+							Get a list of $2s
+						</p>
+					</text>
+					<output>
+						<object>
+							<list name="data">
+								<object>
+									<attribute name="" type="" />
+								</object>
+							</list>
+							<object name="meta">
+								<attribute name="dir" type="string" />
+								<attribute name="limit" type="integer" />
+								<attribute name="sort" type="string" />
+								<attribute name="start" type="integer" />
+								<attribute name="total" type="integer" />
+							</object>
+							<attribute name="success" type="boolean" />
+						</object>
+					</output>
+				</method>
+				<method name="POST">
+					<text>
+						<p>
+							Create a $2
+						</p>
+					</text>
+					<input>
+						<object>
+						</object>
+					</input>
+					<output>
+						<object>
+							<object name="data">
+							</object>
+							<attribute name="success" type="boolean" />
+						</object>
+					</output>
+				</method>
+			</endpoint>
+			<endpoint url="/api/$1/:$1_id">
+				<method name="GET">
+					<text>
+						<p>
+							Get a $2
+						</p>
+					</text>
+					<output>
+						<object>
+							<object name="data">
+							</object>
+							<attribute name="success" type="boolean" />
+						</object>
+					</output>
+				</method>
+				<method name="PUT">
+					<text>
+						<p>
+							Update a $2
+						</p>
+					</text>
+					<input>
+						<object>
+						</object>
+					</input>
+					<output>
+						<object>
+							<object name="data">
+							</object>
+							<attribute name="success" type="boolean" />
+						</object>
+					</output>
+				</method>
+				<method name="DELETE">
+					<text>
+						<p>
+							Delete a $2
+						</p>
+					</text>
+					<output>
+						<object>
+							<attribute name="success" type="boolean" />
+						</object>
+					</output>
+				</method>
+			</endpoint>
+		</section>
+	</chapter>
