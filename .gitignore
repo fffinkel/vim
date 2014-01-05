@@ -1,2 +1,4 @@
 vim/backups
 vim/swap
+vim/bundle
+!vim/bundle/vundle
