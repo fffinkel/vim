@@ -12,6 +12,7 @@ Bundle 'mhinz/vim-startify'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
+Bundle 'pjcj/vim-hl-var'
 
 filetype plugin indent on
 autocmd BufRead,BufNewFile   *.md,*.mkdn set expandtab ts=4 sw=4 ai
