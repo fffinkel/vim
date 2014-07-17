@@ -16,6 +16,7 @@ set backup
 set backupdir=~/.vim/backups/
 set scrolloff=4
 set tw=78
+set bg=dark
 
 " Cursor line
 "set cursorline
