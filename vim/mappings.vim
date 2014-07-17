@@ -62,12 +62,21 @@ nmap <F8> :tabn<CR>
 nmap <F9> :! perl -I lib/ %<CR>
 nmap <F10> :! cadillac prove %<CR>
 
+" Query
+nmap <leader>Q :!rm /tmp/tmp.sql && touch /tmp/tmp.sql<CR>:vs /tmp/tmp.sql<CR>
+nmap <leader>q :w<CR>:!psql -f % -d cirrus<CR>
+
 " Tig
-nmap _T :!tig %<CR><CR>
+nmap <leader>t :!tig %<CR><CR>
 
 " Verify CorvisaDoc
 nmap _X :!xmllint --relaxng ~/src/cadillac/lib/Cadillac/Devel/Doc/internal/schema.rng %<CR>
 
 " Comment blocks
 vnoremap _C :s/^/#/gi<CR>:noh<CR>
-vnoremap _V :s/^#//gi<CR>:noh<CR>
+vnoremap _V :s/^\s*#//gi<CR>:noh<CR>
+
+"This will make an empty newline below the line you're editing right now when
+"you press return and then move your cursor back to the line you were at
+"before.
+nnoremap <CR> mpo<ESC>`p
