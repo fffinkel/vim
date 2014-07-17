@@ -44,3 +44,5 @@ hi CursorLine cterm=NONE ctermbg=lightgrey guibg=darkred guifg=white
 set laststatus=2
 set statusline=%F%m%r%h%w\ [\%03.3b]\ [\%02.2B]\ [%04l,%04v][%p%%]\ [%L]
 
+set wildignorecase
+set updatetime=500
