@@ -9,8 +9,8 @@ map <M-Esc>[65~ <S-MouseUp>
 map! <M-Esc>[65~ <S-MouseUp>
 
 " Create pastie
-nnoremap <C-p> :!curl -s -F data=@% http://pastie.it.corp/ \| xclip -selection clipboard; xclip -selection clipboard -o<CR>
-vnoremap <C-p> <esc>:'<,'>:w !curl -s -F data=@- http://pastie.it.corp/ \| xclip -selection clipboard; xclip -selection clipboard -o<CR>
+nnoremap <C-p> :!curl -s -F data=@% http://pastie.it.corp/<CR>
+vnoremap <C-p> <esc>:'<,'>:w !curl -s -F data=@- http://pastie.it.corp/<CR>
 
 " Move between splits
 nmap <silent> <C-h> :wincmd h<CR>
@@ -31,6 +31,8 @@ command Q q
 " MetaCPAN and Perldoc lookups
 nnoremap _L :set iskeyword=@,58<CR>:!xdg-open https://metacpan.org/search?q=<cword><CR>:set iskeyword-=58<CR>
 nnoremap _l :set iskeyword=@,58<CR>:!perldoc <cword><CR>:set iskeyword-=58<CR>
+
+nnoremap _S :shell<CR>
 
 " Blame
 vmap _B :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
@@ -59,8 +61,13 @@ nmap <F5> :vs
 nmap <F6> :tabe 
 nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
-nmap <F9> :! perl -I lib/ %<CR>
-nmap <F10> :! cadillac prove %<CR>
+"nmap <C-p> :tabp<CR>
+"nmap <C-n> :tabn<CR>
+nmap <F9> :! carton exec perl -Ilib -I/home/mfinkel/src/opsys/cadillac/lib -I/home/mfinkel/src/opsys/rest-api-client/lib %<CR>
+nmap <F10> :! carton exec cadillac prove %<CR>
+
+"nmap <C-p> :tabp<CR>
+"nmap <C-n> :tabn<CR>
 
 " Query
 nmap <leader>Q :!rm /tmp/tmp.sql && touch /tmp/tmp.sql<CR>:vs /tmp/tmp.sql<CR>

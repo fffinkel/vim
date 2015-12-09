@@ -46,3 +46,6 @@ set statusline=%F%m%r%h%w\ [\%03.3b]\ [\%02.2B]\ [%04l,%04v][%p%%]\ [%L]
 
 set wildignorecase
 set updatetime=500
+
+set wildmenu
+set wildmode=full
