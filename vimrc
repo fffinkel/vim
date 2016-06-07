@@ -24,6 +24,9 @@ syntax on
 
 au BufWritePost ~/.vimrc :source ~/.vimrc
 
+scriptencoding utf-8
+set encoding=utf-8
+
 source ~/.vim/variables.vim
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
