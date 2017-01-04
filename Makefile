@@ -3,7 +3,8 @@ clean:
 	-rm ~/.vimrc
 
 install: clean
+	git submodule init
+	git submodule update
 	ln -s $$(pwd)/vim/ ~/.vim
 	ln -s $$(pwd)/vimrc ~/.vimrc
-	git submodule update --init
 	vim +BundleInstall +qall
