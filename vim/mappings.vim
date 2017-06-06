@@ -34,6 +34,12 @@ nnoremap _l :set iskeyword=@,58<CR>:!perldoc <cword><CR>:set iskeyword-=58<CR>
 
 nnoremap _S :shell<CR>
 
+nnoremap _W :vertical resize 86<CR>
+
+nnoremap _P :!perldoc -F %<CR>
+
+nnoremap _D :!git diff %<CR>
+
 " Blame
 vmap _B :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
@@ -63,8 +69,8 @@ nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 "nmap <C-p> :tabp<CR>
 "nmap <C-n> :tabn<CR>
-nmap <F9> :! carton exec perl -Ilib -I/home/mfinkel/src/opsys/cadillac/lib -I/home/mfinkel/src/opsys/rest-api-client/lib %<CR>
-nmap <F10> :! carton exec cadillac prove %<CR>
+nmap <F9> :! perl -I app/lib %<CR>
+nmap <F10> :! prove -vr -I app/lib %<CR>
 
 "nmap <C-p> :tabp<CR>
 "nmap <C-n> :tabn<CR>
@@ -87,3 +93,7 @@ vnoremap _V :s/^\s*#//gi<CR>:noh<CR>
 "you press return and then move your cursor back to the line you were at
 "before.
 nnoremap <CR> mpo<ESC>`p
+
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+nnoremap _A :Ack!<Space>

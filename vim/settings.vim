@@ -3,6 +3,7 @@ set showcmd
 set showmatch
 set autoindent
 set smartindent
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -15,8 +16,10 @@ set incsearch
 set backup
 set backupdir=~/.vim/backups/
 set scrolloff=4
-set tw=78
 set bg=dark
+
+set colorcolumn=81
+set tw=80
 
 " Cursor line
 "set cursorline
@@ -49,3 +52,5 @@ set updatetime=500
 
 set wildmenu
 set wildmode=full
+
+set path+=app/lib
