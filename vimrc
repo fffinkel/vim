@@ -14,6 +14,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
 Plugin 'mileszs/ack.vim'
+Plugin 'vimwiki/vimwiki.git'
 
 "Bundle 'honza/vim-snippets'
 "Bundle 'pjcj/vim-hl-var'
