@@ -54,3 +54,5 @@ set wildmenu
 set wildmode=full
 
 set path+=app/lib
+
+set spell
