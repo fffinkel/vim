@@ -97,3 +97,5 @@ nnoremap <CR> mpo<ESC>`p
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 nnoremap _A :Ack!<Space>
+
+nnoremap <Leader>tl :TlistToggle<CR>
