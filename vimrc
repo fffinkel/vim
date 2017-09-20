@@ -15,9 +15,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-unimpaired'
 Plugin 'mileszs/ack.vim'
 Plugin 'vimwiki/vimwiki.git'
+Plugin 'craigemery/vim-autotag'
+Plugin 'pjcj/vim-hl-var'
+Plugin 'easymotion/vim-easymotion'
 
 "Bundle 'honza/vim-snippets'
-"Bundle 'pjcj/vim-hl-var'
 "Bundle 'tpope/vim-surround'
 
 call vundle#end()
