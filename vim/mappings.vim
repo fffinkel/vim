@@ -1,16 +1,25 @@
-" Support for scroll wheel
-map <M-Esc>[62~ <MouseDown>
-map! <M-Esc>[62~ <MouseDown>
-map <M-Esc>[63~ <MouseUp>
-map! <M-Esc>[63~ <MouseUp>
-map <M-Esc>[64~ <S-MouseDown>
-map! <M-Esc>[64~ <S-MouseDown>
-map <M-Esc>[65~ <S-MouseUp>
-map! <M-Esc>[65~ <S-MouseUp>
 
-" Create pastie
-nnoremap <C-p> :!curl -s -F data=@% http://pastie.it.corp/<CR>
-vnoremap <C-p> <esc>:'<,'>:w !curl -s -F data=@- http://pastie.it.corp/<CR>
+" Create Slack snippet
+function! SendSlackSnippet(visual)
+  call inputsave()
+  let channel = input('channel: ')
+  call inputrestore()
+
+  let prefix = ''
+  if a:visual
+    let prefix = ":'<,'>"
+  endif
+
+  execute prefix . ':w !curl -s'
+        \ . ' -F file=@-'
+        \ . ' -F channels=\\#' . channel
+        \ . ' -F token=$SLACKTOKEN'
+        \ . ' -F filetype=' . &ft
+        \ . ' https://slack.com/api/files.upload'
+endfunction
+
+nnoremap <C-p> :call SendSlackSnippet(0)<CR>
+vnoremap <C-p> <esc>:call SendSlackSnippet(1)<CR>
 
 " Move between splits
 nmap <silent> <C-h> :wincmd h<CR>
@@ -29,37 +38,28 @@ command W w
 command Q q
 
 " MetaCPAN and Perldoc lookups
+" TODO remove use of non-leader
 nnoremap _L :set iskeyword=@,58<CR>:!xdg-open https://metacpan.org/search?q=<cword><CR>:set iskeyword-=58<CR>
 nnoremap _l :set iskeyword=@,58<CR>:!perldoc <cword><CR>:set iskeyword-=58<CR>
 
-nnoremap _S :shell<CR>
+" Shell
+nnoremap <leader>s :shell<CR>
 
+" Just right
+" TODO remove use of non-leader
 nnoremap _W :vertical resize 86<CR>
 
-nnoremap _P :!perldoc -F %<CR>
-
-nnoremap _D :!git diff %<CR>
-
 " Blame
-vmap _B :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+vmap <leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
-" Vertical split resize
+" Vertical split resize, keep visual mode highlights
 nmap > 5<C-W>>
 nmap < 5<C-W><
-
-" Keep visual mode highlights highlighted
 vnoremap < <gv
 vnoremap > >gv
 
-" SimpleNote
-nnoremap nl :Simplenote -l<CR>
-nnoremap ne :Simplenote -n<CR>
-nnoremap nd :Simplenote -d<CR>
-nnoremap nt :Simplenote -t<CR>
-nnoremap nu :Simplenote -u<CR>
-
 " Function keys
-nnoremap <F2> :!perldoc %<CR>
+nnoremap <F2> :!perldoc -F %<CR>
 nnoremap <F3> :!grep -r '\#TODO ' %<CR>
 map <F4> :let t = winsaveview()<CR>:%!perltidy<CR>:%!podtidy<CR>:w<CR>:call winrestview(t)<CR>
 vnoremap <F4> <esc>:'<,'>!perltidy<CR>:w<CR>
@@ -67,35 +67,21 @@ nmap <F5> :vs
 nmap <F6> :tabe 
 nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
-"nmap <C-p> :tabp<CR>
-"nmap <C-n> :tabn<CR>
 nmap <F9> :! perl -I app/lib %<CR>
-nmap <F10> :! prove -vr -I app/lib %<CR>
-
-"nmap <C-p> :tabp<CR>
-"nmap <C-n> :tabn<CR>
-
-" Query
-nmap <leader>Q :!rm /tmp/tmp.sql && touch /tmp/tmp.sql<CR>:vs /tmp/tmp.sql<CR>
-nmap <leader>q :w<CR>:!psql -f % -d cirrus<CR>
+nmap <F10> :! yath run %<CR>
 
 " Tig
 nmap <leader>t :!tig %<CR><CR>
 
-" Verify CorvisaDoc
-nmap _X :!xmllint --relaxng ~/src/cadillac/lib/Cadillac/Devel/Doc/internal/schema.rng %<CR>
-
 " Comment blocks
+" TODO remove use of non-leader
 vnoremap _C :s/^/#/gi<CR>:noh<CR>
 vnoremap _V :s/^\s*#//gi<CR>:noh<CR>
 
-"This will make an empty newline below the line you're editing right now when
-"you press return and then move your cursor back to the line you were at
-"before.
-nnoremap <CR> mpo<ESC>`p
+" Taglist
+nnoremap <leader>tl :TlistToggle<CR>
 
+" Ack
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-nnoremap _A :Ack!<Space>
-
-nnoremap <Leader>tl :TlistToggle<CR>
+nnoremap <leader>a :Ack!<Space>
+nnoremap <leader>A :Ack! <C-R><C-W> app/lib<CR>
