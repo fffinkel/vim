@@ -1,4 +1,13 @@
-set number
+
+set number " line numbers
+set spell " spelling
+set bg=dark " dark background
+set colorcolumn=81 " column to indicate long lines
+set tw=80 " word wrap / TODO: this sucks
+set directory=~/.vim/swap/ " swap dir
+
+"TODO: comments
+"
 set showcmd
 set showmatch
 set autoindent
@@ -7,59 +16,36 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set directory=~/.vim/swap/
 set smartcase
-
 set hlsearch
-set smartcase
 set incsearch
-set backup
-set backupdir=~/.vim/backups/
 set scrolloff=4
-set bg=dark
-
-set colorcolumn=81
-set tw=80
-
-" Cursor line
-"set cursorline
-"hi CursorLine cterm=NONE ctermbg=darkgrey guibg=darkred guifg=white
-
-" Folding
-"set foldmethod=syntax   "fold based on indent
-"set foldnestmax=5      "deepest fold is 10 levels
-"set nofoldenable        "dont fold by default
-"set foldlevel=1         "this is just what i use
-
-" Display tabs and trailing spaces
-"set listchars=tab:▶·,trail:∙,precedes:«,extends:» ",eol:↲
-set listchars=tab:☃·,trail:∙,precedes:«,extends:» ",eol:↲
-set list
-
-" Make X clipboard the default paste buffer
-:if $DISPLAY != ""
-	set mouse=a
-	set clipboard=unnamed,autoselect,exclude:cons\|linux
-:endif
-"
-" Status bar
-hi CursorLine cterm=NONE ctermbg=lightgrey guibg=darkred guifg=white
 set laststatus=2
 set statusline=%F%m%r%h%w\ [\%03.3b]\ [\%02.2B]\ [%04l,%04v][%p%%]\ [%L]
-
 set wildignorecase
 set updatetime=500
-
 set wildmenu
 set wildmode=full
 
-set path+=app/lib
+" show whitespace characters
+set list
+set listchars=tab:☃·,trail:∙,precedes:«,extends:»
 
-set spell
+" backups
+set backup
+set backupdir=~/.vim/backups/
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" perl
+let perl_extended_vars = 1
+let perl_highlight_matches = 1
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" snipmate plugin
+let g:snippets_dir = '/home/mfinkel/.vim/snippets/'
+
+" taglist plugin
+let Tlist_Auto_Open = 1
+let Tlist_Auto_Update = 1
+let Tlist_Auto_Auto_Highlight_Tag = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Display_Tag_Scope = 1
+let tlist_perl_settings='perl;u:use;p:package;r:role;e:extends;c:constant;a:attribute;s:subroutine;l:label'
