@@ -4,22 +4,24 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-Bundle 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'mhinz/vim-startify'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'mhinz/vim-startify'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'mileszs/ack.vim'
 Plugin 'vimwiki/vimwiki.git'
 Plugin 'craigemery/vim-autotag'
 Plugin 'pjcj/vim-hl-var'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'ipod825/vim-tagjump'
 
-"Bundle 'honza/vim-snippets'
+"Plugin 'garbas/vim-snipmate'
 "Bundle 'tpope/vim-surround'
 
 call vundle#end()
