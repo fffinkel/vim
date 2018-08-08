@@ -39,7 +39,8 @@ vnoremap > >gv
 " Function keys
 nnoremap <F2> :!perldoc -F %<CR>
 nnoremap <F3> :!grep -r '\#TODO ' %<CR>
-map <F4> :let t = winsaveview()<CR>:%!perltidy<CR>:%!podtidy<CR>:w<CR>:call winrestview(t)<CR>
+map <F4> :let t = winsaveview()<CR>:%!perltidy<CR>:w<CR>:call winrestview(t)<CR>
+"map <F4> :let t = winsaveview()<CR>:%!perltidy<CR>:%!podtidy<CR>:w<CR>:call winrestview(t)<CR>
 vnoremap <F4> <esc>:'<,'>!perltidy<CR>:w<CR>
 nmap <F5> :vs 
 nmap <F6> :tabe 
