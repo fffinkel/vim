@@ -14,7 +14,9 @@ Plugin 'vimwiki/vimwiki.git'
 Plugin 'craigemery/vim-autotag'
 Plugin 'pjcj/vim-hl-var'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'garbas/vim-snipmate'
 Plugin 'ipod825/vim-tagjump'
 
 call vundle#end()
