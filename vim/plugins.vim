@@ -18,5 +18,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
 Plugin 'ipod825/vim-tagjump'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 
 call vundle#end()
