@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 au BufRead,BufNewFile *.t set filetype=perl
 syntax on
@@ -15,3 +16,5 @@ source ~/.vim/plugins.vim
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
 source ~/.vim/functions.vim
+
+

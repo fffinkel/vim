@@ -21,5 +21,6 @@ Plugin 'ipod825/vim-tagjump'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
