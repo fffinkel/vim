@@ -49,3 +49,6 @@ let Tlist_Auto_Auto_Highlight_Tag = 1
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Display_Tag_Scope = 1
 let tlist_perl_settings='perl;u:use;p:package;r:role;e:extends;c:constant;a:attribute;s:subroutine;l:label'
+
+" make vim-wiki zr-wiki
+let g:vimwiki_list = [{'path': '~/ziprecruiter/.zr-wiki/mattf/', 'syntax': 'markdown', 'ext': '.page'}]

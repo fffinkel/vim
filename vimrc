@@ -17,4 +17,6 @@ source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
 source ~/.vim/functions.vim
 
-
+if @% == ""
+  :silent edit ~/ziprecruiter/.zr-wiki/mattf/index.page
+endif
