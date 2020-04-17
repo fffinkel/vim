@@ -12,7 +12,7 @@ set showcmd
 set showmatch
 set autoindent
 set smartindent
-set expandtab
+"set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -52,3 +52,5 @@ let tlist_perl_settings='perl;u:use;p:package;r:role;e:extends;c:constant;a:attr
 
 " make vim-wiki zr-wiki
 let g:vimwiki_list = [{'path': '~/ziprecruiter/.zr-wiki/mattf/', 'syntax': 'markdown', 'ext': '.page'}]
+
+let g:go_version_warning = 0
