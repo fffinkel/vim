@@ -21,3 +21,5 @@ source ~/.vim/functions.vim
 if @% == ""
   :silent edit ~/ziprecruiter/.zr-wiki/mattf/index.page
 endif
+
+set completeopt+=longest,noselect,menuone,preview
