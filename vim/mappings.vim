@@ -47,7 +47,7 @@ nmap <F6> :tabe
 nmap <F7> :tabp<CR>
 nmap <F8> :tabn<CR>
 nmap <F9> :! perl -I app/lib %<CR>
-nmap <F10> :! yath run %<CR>
+nmap <F10> :%s/\t/  /g<CR>
 
 " Tig
 nmap <leader>t :!tig %<CR><CR>
