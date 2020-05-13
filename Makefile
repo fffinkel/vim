@@ -3,7 +3,7 @@ clean:
 	-rm ~/.vimrc
 
 install: clean
-	ln -s ~/cnf/dotfiles/vim/ ~/.vim
-	ln -s ~/cnf/dotfiles/vimrc ~/.vimrc
+	ln -s ~/cnf/vim/vim/ ~/.vim
+	ln -s ~/cnf/vim/vimrc ~/.vimrc
 	git submodule update --init
 	vim +BundleInstall +qall
