@@ -19,5 +19,6 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'fatih/vim-go'
+Plugin 'sirver/ultisnips'
 
 call vundle#end()

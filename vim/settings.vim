@@ -54,3 +54,8 @@ let tlist_perl_settings='perl;u:use;p:package;r:role;e:extends;c:constant;a:attr
 let g:vimwiki_list = [{'path': '~/ziprecruiter/.zr-wiki/mattf/', 'syntax': 'markdown', 'ext': '.page'}]
 
 let g:go_version_warning = 0
+
+" sirver/ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
