@@ -1,6 +1,6 @@
 
 set number " line numbers
-set spell " spelling
+set nospell " spelling
 set bg=dark " dark background
 set colorcolumn=81 " column to indicate long lines
 set tw=80 " word wrap / TODO: this sucks
