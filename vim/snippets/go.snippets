@@ -1,3 +1,12 @@
-snippet debug
-	aaaahhhh, _ := json.MarshalIndent($0, "", "\t")
-	fmt.Printf("\n\n here's the bidness:\n%s\n", aaaahhhh)
+snippet ff
+	fmt.Printf("\n\n----------> %+v\n", $0)
+
+snippet fff
+	zz, _ := json.MarshalIndent($0, "", "\t")
+	fmt.Printf("\n\n----------> %s\n", zz)
+
+snippet fffbuf
+	buf := new(bytes.Buffer)
+	buf.ReadFrom($0)
+	zz := buf.String()
+	fmt.Printf("\n\n----------> %s\n", zz)
