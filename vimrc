@@ -10,7 +10,10 @@ syntax on
 scriptencoding utf-8
 set encoding=utf-8
 
+au BufWritePost ~/.vim/* :source ~/.vimrc
 au BufWritePost ~/.vimrc :source ~/.vimrc
+
+au BufWritePost ~/.zsh/* :source ~/.zshrc
 au BufWritePost ~/.zshrc :!source ~/.zshrc
 
 source ~/.vim/plugins.vim

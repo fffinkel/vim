@@ -65,4 +65,6 @@ cnoreabbrev Ack Ack!
 nnoremap <leader>a :Ack!<Space>
 nnoremap <leader>A :Ack! <C-R><C-W> app/lib<CR>
 
-nmap <leader>vimrc :tabe ~/.vimrc<CR>
+" quick vimrc edit
+nmap <leader>v :tabe ~/.vimrc<CR>
+nmap <leader>V :tabe ~/.vim/<CR>
