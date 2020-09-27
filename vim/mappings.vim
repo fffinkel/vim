@@ -68,3 +68,8 @@ nnoremap <leader>A :Ack! <C-R><C-W> app/lib<CR>
 " quick vimrc edit
 nmap <leader>v :tabe ~/.vimrc<CR>
 nmap <leader>V :tabe ~/.vim/<CR>
+
+" fake ass go debug
+abbrev ff fmt.Printf("\n\n----------> %s\n", )
+abbrev fff zz, _ := json.MarshalIndent( , "", "\t")<cr>fmt.Printf("\n\n----------> %s\n", zz)
+abbrev ffff buf := &bytes.Buffer{}<cr>buf.ReadFrom( )<cr>zz := buf.String()<cr>mt.Printf("\n\n----------> %s\n", zz)
