@@ -18,5 +18,6 @@ Plugin 'ipod825/vim-tagjump'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'fatih/vim-go'
 Plugin 'sirver/ultisnips'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
