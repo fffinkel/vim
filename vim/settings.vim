@@ -4,6 +4,7 @@ set nospell " spelling
 set bg=dark " dark background
 set colorcolumn=81 " column to indicate long lines
 set tw=80 " word wrap / TODO: this sucks
+set fo=tcqb " auto-wrap, auto-add comment leader, allow use of gq, don't auto-wrap long lines
 set directory=~/.vim/swap/ " swap dir
 
 "TODO: comments
