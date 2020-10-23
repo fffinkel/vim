@@ -65,3 +65,5 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" fixes broken plugin on Catalina
+let g:autotagStartMethod="fork"
