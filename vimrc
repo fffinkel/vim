@@ -2,6 +2,9 @@
 set nocompatible
 filetype off
 
+set background=dark
+colorscheme solarized8
+
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 au BufRead,BufNewFile *.t set filetype=perl

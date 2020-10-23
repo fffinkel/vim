@@ -19,5 +19,6 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'fatih/vim-go'
 Plugin 'sirver/ultisnips'
 Plugin 'tpope/vim-commentary'
+Plugin 'sheerun/vim-polyglot'
 
 call vundle#end()
