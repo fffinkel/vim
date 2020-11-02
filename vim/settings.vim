@@ -59,6 +59,8 @@ let g:vimwiki_list = [{'path': '~/ziprecruiter/.zr-wiki/mattf/', 'syntax': 'mark
 
 " golang
 let g:go_version_warning = 0
+let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
 
 " sirver/ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
