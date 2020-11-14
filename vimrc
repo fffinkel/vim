@@ -25,8 +25,4 @@ source ~/.vim/plugins.vim
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
 
-if @% == ""
-  :silent edit ~/ziprecruiter/.zr-wiki/mattf/index.page
-endif
-
 set completeopt+=longest,noselect,menuone,preview
