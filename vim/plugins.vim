@@ -20,5 +20,6 @@ Plugin 'fatih/vim-go'
 Plugin 'sirver/ultisnips'
 Plugin 'tpope/vim-commentary'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'gabrielelana/vim-markdown'
 
 call vundle#end()
