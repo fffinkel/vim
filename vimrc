@@ -19,6 +19,8 @@ au BufWritePost ~/.vimrc :source ~/.vimrc
 au BufWritePost ~/.zsh/* :source ~/.zshrc
 au BufWritePost ~/.zshrc :!source ~/.zshrc
 
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
 source ~/.vim/plugins.vim
 source ~/.vim/settings.vim
 source ~/.vim/mappings.vim
