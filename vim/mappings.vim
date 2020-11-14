@@ -73,3 +73,8 @@ nmap <leader>V :tabe ~/.vim/<CR>
 abbrev ff fmt.Printf("\n\n----------> %s\n", )
 abbrev fff zz, _ := json.MarshalIndent( , "", "\t")<cr>fmt.Printf("\n\n----------> %s\n", zz)
 abbrev ffff buf := &bytes.Buffer{}<cr>buf.ReadFrom( )<cr>zz := buf.String()<cr>mt.Printf("\n\n----------> %s\n", zz)
+
+" notes
+nmap <leader>no :tabe <C-r>=system("~/.vim/opennotes.sh")<cr>
+imap <F3> ## <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+
