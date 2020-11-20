@@ -75,6 +75,6 @@ abbrev fff zz, _ := json.MarshalIndent( , "", "\t")<cr>fmt.Printf("\n\n---------
 abbrev ffff buf := &bytes.Buffer{}<cr>buf.ReadFrom( )<cr>zz := buf.String()<cr>mt.Printf("\n\n----------> %s\n", zz)
 
 " notes
-nmap <leader>no :tabe <C-r>=system("~/.vim/opennotes.sh")<cr>
+nmap <leader>no :tabe <C-R>=system("~/.vim/opennotes.sh")<cr><cr>
 imap <F3> ## <C-R>=strftime("%Y-%m-%d %a %I:%M %p %Z")<cr> (
 
