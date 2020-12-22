@@ -52,7 +52,7 @@ let Tlist_Display_Tag_Scope = 1
 let Tlist_Max_Submenu_Items = 20
 let Tlist_File_Fold_Auto_Close = 1
 let tlist_perl_settings='perl;u:use;p:package;r:role;e:extends;c:constant;a:attribute;s:subroutine;l:label'
-let tlist_go_settings = 'go;o:TODO‽;t:type;f:function;v:variable'
+let tlist_go_settings = 'go;o:TODO‽;t:type;f:function'
 
 " make vim-wiki zr-wiki
 let g:vimwiki_list = [{'path': '~/ziprecruiter/.zr-wiki/mattf/', 'syntax': 'markdown', 'ext': '.page'}]
