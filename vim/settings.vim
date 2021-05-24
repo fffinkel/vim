@@ -69,3 +69,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " fixes broken plugin on Catalina
 let g:autotagStartMethod="fork"
+
+" vim-markdown
+let g:markdown_enable_conceal = 1
